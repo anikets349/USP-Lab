@@ -9,6 +9,7 @@ int main(void) {
 		pid = fork(); // creates the second child or grandchild
 		if (pid == 0) {
 			// inside the second child
+			sleep(1);
 			printf("Grandchild PID : %d\n", getpid());
 			printf("Child PID : %d\n", getppid());
 		}
