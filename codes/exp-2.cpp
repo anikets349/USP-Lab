@@ -18,21 +18,22 @@ int main(void) {
 	#endif
 	
 	#ifdef _POSIX_CHOWN_RESTRICTED
-		cout<<"Users may change ownership of files owned by them"<<endl;
-	#else 
 		cout<<"Only superuser can change ownership of files"<<endl;
+	#else 
+		cout<<"Users may change ownership of files owned by them"<<endl;
+		
 	#endif
 	
 	#ifdef _POSIX_NO_TRUNC
-		cout<<"System supports path truncation"<<endl;
-	#else 
 		cout<<"System does not support path truncation"<<endl;
+	#else 
+		cout<<"System supports path truncation"<<endl;
 	#endif
 	
 	#ifdef _POSIX_VDISABLE
-		cout<<"System supports disabling characters"<<endl;
+		cout<<"System does support disabling characters"<<endl;
 	#else 
-		cout<<"System does not support disabling characters"<<endl;
+		cout<<"System doesnt support disabling characters"<<endl;
 	#endif
 	return 0;
 }
